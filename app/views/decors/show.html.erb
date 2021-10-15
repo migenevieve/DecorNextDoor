@@ -1,0 +1,18 @@
+<h1><%= @decor.title %></h1>
+
+<ul>
+    <li>Catégorie: <%= @decor.category %></li>
+    <li>Luminosité: <%= @decor.luminosity %>  lumineux</li>
+    <li>Extra: <%= @decor.extra %></li>
+    <li>Exposition: <%= @decor.decor_exposition %></li>
+    <li>Adresse: <%= @decor.address %></li>
+    <li>Dimension: <%= @decor.size %>m2</li>
+    <li>Capacité: <%= @decor.capacity %></li>
+    <li>Prix: <%= @decor.price %>/heure</li>
+
+  <%= link_to 'Revoir tous les décors', decors_path %>
+  <%= link_to 'Éditer ce décor', edit_decor_path(@decor) %>
+  <%= link_to "supprimer #{@decor.title}", decor_path(@decor), method: :delete, data: {confirm: "Are you sure?"} %>
+
+
+</ul>

@@ -1,0 +1,9 @@
+<h1>Voici tous les décors</h1>
+
+<ul>
+  <% @decors.each do |decor| %>
+    <li><%= link_to decor.title, decor_path(decor) %></li>
+  <% end %>
+
+  <%= link_to 'Proposer un décor', new_decor_path  %>
+</ul>
