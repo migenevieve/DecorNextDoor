@@ -1,0 +1,12 @@
+<%= simple_form_for @decor do |f| %>
+  <%= f.input :title %>
+  <%= f.input :category, collection: Decor::CATEGORY %>
+  <%= f.input :luminosity, collection: Decor::LUMINOSITY %>
+  <%= f.input :decor_exposition, collection: Decor::DECOR_EXPOSITION %>
+  <%= f.input :extra %>
+  <%= f.input :address %>
+  <%= f.input :size %>
+  <%= f.input :capacity %>
+  <%= f.input :price %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>

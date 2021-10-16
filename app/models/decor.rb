@@ -1,6 +1,7 @@
 class Decor < ApplicationRecord
   belongs_to :user
   has_many :bookings
+  has_many_attached :photos
 
   CATEGORY = %w[vintage original campagnard contemporain industriel neutre artistique]
   LUMINOSITY = %w[peu moyen très]

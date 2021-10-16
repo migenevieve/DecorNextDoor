@@ -1,0 +1,16 @@
+<h1> <%= @profile.first_name %></h1>
+
+<ul>
+    <li><%= @profile.description %></li>
+    <li><%= @profile.city %>
+    <% if @profile.photo.attached? %>
+      <%= cl_image_tag @profile.photo.key, height: 300, width: 400, crop: :fill %>
+    <% end %>
+
+
+  <%= link_to 'rechercher un décor', root_path %>
+  <%= link_to 'Éditer le profil', edit_profile_path(@profile) %>
+  <%= link_to "supprimer ton profil", root_path, method: :delete, data: {confirm: "Are you sure?"} %>
+
+
+</ul>
