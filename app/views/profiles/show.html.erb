@@ -1,11 +1,11 @@
-<h1> <%= @profile.first_name %></h1>
-
-<ul>
-    <li><%= @profile.description %></li>
-    <li><%= @profile.city %>
-    <% if @profile.photo.attached? %>
+<h1> <%= @profile.first_name %> <%= @profile.last_name %></h1>
+<% if @profile.photo.attached? %>
       <%= cl_image_tag @profile.photo.key, height: 300, width: 400, crop: :fill %>
-    <% end %>
+<% end %>
+<ul>
+    <li><%= @profile.city %>
+    <li><%= @profile.description %></li>
+
 
 
   <%= link_to 'rechercher un décor', root_path %>

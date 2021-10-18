@@ -8,4 +8,5 @@ class User < ApplicationRecord
   has_many :bookings
   has_many :decors
   has_many :bookings_as_owner, through: :decors, source: :bookings
+  has_one :profile, dependent: :destroy
 end

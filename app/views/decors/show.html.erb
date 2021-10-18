@@ -1,5 +1,15 @@
 <h1><%= @decor.title %></h1>
 
+<% if @decor.photos.attached? %>
+  <%= cl_image_tag @decor.photos[0].key, height: 400, width: 400, crop: :fill %>
+<% end %>
+<% if @decor.photos.count > 1 %>
+  <% @decor.photos.drop(1).each do |photo| %>
+  <%= cl_image_tag photo.key, height: 400, width: 800, crop: :fill %>
+  <% end %>
+<% end %>
+
+
 <ul>
     <li>Catégorie: <%= @decor.category %></li>
     <li>Luminosité: <%= @decor.luminosity %>  lumineux</li>
